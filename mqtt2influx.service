@@ -1,0 +1,13 @@
+[Unit]
+Description=mqtt2influx
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/mqtt2influx
+ExecStart=/opt/mqtt2influx/mqtt2influx.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
